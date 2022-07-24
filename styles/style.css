@@ -2,3 +2,10 @@
   font-family: norse-bold;
   src: url("../fonts/Norse-Bold.otf");
 }
+
+.picture {
+  background-image: url("../images/dex-ezekiel-IxDPZ-AHfoI-unsplash.jpg");
+  background-position: center;
+  background-size: auto;
+  width: 40vw;
+}
