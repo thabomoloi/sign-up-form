@@ -2,8 +2,10 @@
   font-family: norse-bold;
   src: url("../fonts/Norse-Bold.otf");
 }
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 main {
   height: 100vh;
@@ -11,12 +13,43 @@ main {
 .picture {
   background-image: url("../images/dex-ezekiel-IxDPZ-AHfoI-unsplash.jpg");
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   width: 40vw;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.logo-container {
+  display: flex;
+  height: 20vh;
+  width: 100%;
+  position: relative;
+  top: 30vh;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.logo-container + div {
+  margin-top: auto;
+}
+.logo-container + div > span {
+  text-align: center;
+  color: white;
+}
+.logo-container + div > span > a {
+  color: rgb(201, 201, 201);
 }
 #odin-logo {
-  width: 60px;
+  height: 15vh;
+  width: auto;
+}
+#odin-logo + h1 {
+  font-family: norse-bold, sans-serif;
+  color: white;
+  font-size: 76px;
 }
 
 .picture > div:first-child {
