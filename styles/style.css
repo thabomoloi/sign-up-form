@@ -3,7 +3,7 @@
   src: url("../fonts/Norse-Bold.otf");
 }
 :root {
-  background-color: rgb(39, 0, 17);
+  background-color: rgb(255, 254, 224);
 }
 * {
   margin: 0;
@@ -12,6 +12,7 @@
 }
 main {
   height: 100vh;
+  display: flex;
 }
 .picture {
   background-image: url("../images/dex-ezekiel-IxDPZ-AHfoI-unsplash.jpg");
@@ -58,4 +59,7 @@ main {
 .picture > div:first-child {
   display: flex;
   flex-flow: row wrap;
+}
+.message-note {
+  padding: 50px 100px 100px 50px;
 }
