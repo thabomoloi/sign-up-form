@@ -2,6 +2,9 @@
   font-family: norse-bold;
   src: url("../fonts/Norse-Bold.otf");
 }
+:root {
+  background-color: rgb(39, 0, 17);
+}
 * {
   margin: 0;
   padding: 0;
