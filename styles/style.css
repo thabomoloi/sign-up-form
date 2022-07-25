@@ -13,12 +13,13 @@
 main {
   height: 100vh;
   display: flex;
+  flex-flow: row wrap;
 }
 .picture {
   background-image: url("../images/dex-ezekiel-IxDPZ-AHfoI-unsplash.jpg");
   background-position: center;
   background-size: cover;
-  width: 45vw;
+  width: 40vw;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -55,6 +56,9 @@ main {
   color: white;
   font-size: 76px;
 }
+.content-container {
+  width: 60vw;
+}
 
 .picture > div:first-child {
   display: flex;
@@ -66,4 +70,29 @@ main {
 }
 .message-note > p:first-of-type {
   padding-bottom: 25px;
+}
+.form-input {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 25px 50px;
+  background-color: #fff;
+}
+.form-input > div {
+  display: flex;
+  justify-content: left;
+  gap: 50px;
+}
+.form-input > p {
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.form-input label {
+  display: block;
+  font-size: 14px;
+}
+.form-input input {
+  margin-bottom: 15px;
+  height: 30px;
+  font-size: 18px;
 }
