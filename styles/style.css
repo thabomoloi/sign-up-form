@@ -104,7 +104,7 @@ main {
 .create-account > button {
   margin-bottom: 25px;
   font-family: inherit;
-  padding: 10px 50px;
+  padding: 15px 50px;
   font-size: 16px;
   font-weight: 600;
   box-shadow: 1px 1px 1px 1px rgb(214, 209, 209);
@@ -112,4 +112,7 @@ main {
   border: none;
   color: #fff;
   background-color: rgb(15, 66, 0);
+}
+.create-account > button:hover {
+  background-color: rgb(0, 66, 50);
 }
