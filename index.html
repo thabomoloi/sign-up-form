@@ -51,28 +51,33 @@
               <p>Let's do this!</p>
               <div class="name">
                 <div>
-                  <label for="firstname">FIRST NAME</label>
-                  <input id="firstname" name="firstname" type="text" />
+                  <label for="firstname" required>FIRST NAME</label>
+                  <input id="firstname" name="firstname" type="text" required />
                 </div>
                 <div>
                   <label for="lastname">LAST NAME</label>
-                  <input id="lastname" name="lastname" type="text" />
+                  <input id="lastname" name="lastname" type="text" required />
                 </div>
               </div>
               <div class="contact">
                 <div>
                   <label for="email">EMAIL</label>
-                  <input id="email" name="email" type="email" />
+                  <input id="email" name="email" type="email" required />
                 </div>
                 <div>
                   <label for="phone">PHONE NUMBER</label>
-                  <input id="phone" name="phone" type="tel" />
+                  <input id="phone" name="phone" type="tel" required />
                 </div>
               </div>
               <div class="passwords">
                 <div>
                   <label for="password">PASSWORD</label>
-                  <input id="password" name="password" type="password" />
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    required
+                  />
                 </div>
                 <div>
                   <label for="confirmpassword">CONFIRM PASSWORD</label>
@@ -80,6 +85,7 @@
                     id="confirmpassword"
                     name="confirmpassword"
                     type="password"
+                    required
                   />
                 </div>
               </div>
