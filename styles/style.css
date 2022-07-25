@@ -100,10 +100,12 @@ main {
 }
 .create-account {
   padding-top: 25px;
-  padding-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 .create-account > button {
-  margin-bottom: 25px;
   font-family: inherit;
   padding: 15px 50px;
   font-size: 16px;
@@ -131,4 +133,11 @@ input:focus {
   border: 0.5px solid rgb(0, 92, 197);
   outline: none;
   box-shadow: 2px 2px 1px 1px rgb(134, 134, 134);
+}
+
+ul {
+  margin-left: 20px;
+}
+li {
+  font-size: 12px;
 }
