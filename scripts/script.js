@@ -27,7 +27,7 @@ function updateItem(id, decoration, color) {
     item.style.color = color;
 }
 function validatePassword(password) {
-    const symbols = /[-!#$%^&*()_+|~=`{}\[\]:";'<>?,.\/]/g;
+    const symbols = /[-!#$%^&*()\\@_+|~=`{}\[\]:";'<>?,.\/]/g;
     // uppercase check
     if (password.match(/[A-Z]/g)) updateItem("#upper", "line-through", "green");
     else updateItem("#upper", "none", "red");
@@ -43,6 +43,12 @@ function validatePassword(password) {
 
     if (password.length >= 6 && password.length <= 16) updateItem("#length", "line-through", "green");
     else updateItem("#length", "none", "red");
+
+    if (!(password.match(/[A-Z]/g) && password.match(/[a-z]/g) && password.match(/[0-9]/g) &&
+        password.match(symbols) && (password.length >= 6 && password.length <= 16))) {
+        return false;
+    }
+    return true;
 
 }
 password.addEventListener("input", () => validatePassword(passwordInput.value), false)
