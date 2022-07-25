@@ -65,11 +65,11 @@ main {
   flex-flow: row wrap;
 }
 .message-note {
-  padding: 50px 200px 50px 50px;
+  padding: 50px 200px 25px 50px;
   background-color: rgb(240, 240, 240);
 }
 .message-note > p:first-of-type {
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
 .form-input {
   display: flex;
@@ -95,4 +95,15 @@ main {
   margin-bottom: 15px;
   height: 30px;
   font-size: 18px;
+}
+.create-account {
+  padding-top: 50px;
+  padding-left: 50px;
+}
+.create-account > button {
+  margin-bottom: 25px;
+  font-family: inherit;
+  padding: 10px 50px;
+  font-size: 16px;
+  font-weight: 600;
 }
