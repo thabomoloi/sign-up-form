@@ -51,4 +51,59 @@ function validatePassword(password) {
     return true;
 
 }
-password.addEventListener("input", () => validatePassword(passwordInput.value), false)
+
+const confirmMsg = document.createElement("div");
+const confDiv = document.querySelector(".passwords > div:last-of-type");
+confDiv.appendChild(confirmMsg);
+
+function confirmPassword(confirmPass) {
+    if (passwordInput.value == "" && pconfirmInput.value == "") {
+        confirmMsg.innerText = "";
+        confirmMsg.style.color = "black";
+        if (pconfirmInput.className == "error") {
+            pconfirmInput.classList.toggle("error");
+            passwordInput.classList.toggle("error");
+        }
+    }
+    else if (passwordInput.value == "" && pconfirmInput.value != "") {
+        confirmMsg.innerHTML = "<small>please enter a password first</small>";
+        confirmMsg.style.color = "red";
+        if (pconfirmInput.className == "") {
+            pconfirmInput.classList.toggle("error");
+            passwordInput.classList.toggle("error");
+        }
+    }
+    else if (passwordInput.value != "" && pconfirmInput.value == "") {
+        confirmMsg.innerHTML = "";
+        confirmMsg.style.color = "";
+        if (pconfirmInput.className == "error") {
+            pconfirmInput.classList.toggle("error");
+            passwordInput.classList.toggle("error");
+        }
+    }
+    else if (!validatePassword(passwordInput.value)) {
+        confirmMsg.innerHTML = "<small>your password does not meet the requirements</small>";
+        confirmMsg.style.color = "red";
+        if (pconfirmInput.className == "") {
+            pconfirmInput.classList.toggle("error");
+            passwordInput.classList.toggle("error");
+        }
+    } else if (validatePassword(passwordInput.value) && confirmPass !== passwordInput.value) {
+        confirmMsg.innerHTML = "<small>passwords do not match</small>";
+        confirmMsg.style.color = "red";
+        if (pconfirmInput.className == "") {
+            pconfirmInput.classList.toggle("error");
+            passwordInput.classList.toggle("error");
+        }
+    } else if (validatePassword(passwordInput.value) && confirmPass === passwordInput.value) {
+        confirmMsg.innerText = "";
+        confirmMsg.style.color = "black";
+        if (pconfirmInput.className == "error") {
+            pconfirmInput.classList.toggle("error");
+            passwordInput.classList.toggle("error");
+        }
+    }
+
+}
+passwordInput.addEventListener("input", () => validatePassword(passwordInput.value), false)
+pconfirmInput.addEventListener("input", () => confirmPassword(pconfirmInput.value), false)
