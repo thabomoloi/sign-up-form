@@ -1,8 +1,8 @@
 # sign-up-form
 
-A simple sing up form. Assignment from [The Odin Project](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form).
+A simple sign up form. Assignment from [The Odin Project](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form).
 
-[**Live Demo**](https://thabomcodes.github.io/sign-up-form/)
+[**Live Demo**](https://thabomoloi.github.io/sign-up-form/)
 
 ## Features
 
